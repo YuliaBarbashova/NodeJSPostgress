@@ -1,0 +1,44 @@
+{
+  "name": "nodejspostgress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc && node dist/server",
+    "start:dev": "tsc-watch --onSuccess \"node dist/server\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@mikro-orm/cli": "^6.2.3",
+    "@mikro-orm/core": "^6.2.3",
+    "@mikro-orm/entity-generator": "^6.2.3",
+    "@mikro-orm/migrations": "^6.2.3",
+    "@mikro-orm/postgresql": "^6.2.3",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-joi-validation": "^5.0.1",
+    "http": "^0.0.1-security",
+    "joi": "^17.13.0",
+    "jsonwebtoken": "^9.0.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5",
+    "uuid": "^9.0.1"
+  },
+  "mikro-orm": {
+    "useTsNode": true,
+    "configPaths": [
+      "./app/config/orm.config.ts",
+      "./dist/config/orm.config.js"
+    ]
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^9.0.6",
+    "@types/node": "^20.12.7",
+    "@types/uuid": "^9.0.8",
+    "nodemon": "^3.1.0",
+    "tsc-watch": "^6.2.0"
+  }
+}
